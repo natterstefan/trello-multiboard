@@ -12,7 +12,6 @@ Trello-Multiboard App to display several lists (up to three) from different boar
 * replace `XX` with your Trello-API Key (https://trello.com/app-key) in the `app.json` file
 * setup the config file to load at least one of your boards, so you can test it. See the example below.
 * run `grunt pub`
-* open the `/dist/index.html` and modify the `href` of the `<base>` tag (currently a known issue). It should point to the url you are currently testing on (e.g. with XAMPP: http://localhost/trello-multiboard for instance)
 * open `/dist` folder in your browser
 * you should now see your card of the configured board
 
