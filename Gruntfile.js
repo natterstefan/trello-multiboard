@@ -13,33 +13,33 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         clean: {
-            all: ['dist', 'js/app.min.js', 'css/style.css'],
+            all: ['dist', 'app/js/app.min.js', 'app/css/style.css'],
             bower: ['libs/*/*', '!libs/*/dist']
         },
 
         concat: {
             dist_css: {
-                src: ['css/app.css'],
-                dest: 'css/style.css'
+                src: ['app/css/app.css'],
+                dest: 'app/css/style.css'
             }
         },
 
         copy: {
             dist: {
                 files: {
-                    "dist/.htaccess": ".htaccess",
-                    "dist/index.html": "index.html",
-                    "dist/main.js": "main.js",
-                    "dist/app.json": "app.json",
-                    "dist/css/style.min.css": "css/style.min.css",
-                    "dist/css/bootstrap.min.css": "css/bootstrap.min.css",
-                    "dist/css/bootstrap-theme.min.css": "css/bootstrap-theme.min.css",
-                    "dist/" : "fonts/**",
-                    "dist/img/trello.png": "img/trello.png",
-                    "dist/img/trello_small.png": "img/trello_small.png",
-                    "dist/img/trello_medium.png": "img/trello_medium.png",
-                    "dist/js/app.min.js": "js/app.min.js",
-                    "dist/js/bootstrap.min.js": "js/bootstrap.min.js"
+                    "dist/.htaccess": "app/.htaccess",
+                    "dist/index.html": "app/index.html",
+                    "dist/main.js": "app/main.js",
+                    "dist/app.json": "app/app.json",
+                    "dist/css/style.min.css": "app/css/style.min.css",
+                    "dist/css/bootstrap.min.css": "app/css/bootstrap.min.css",
+                    "dist/css/bootstrap-theme.min.css": "app/css/bootstrap-theme.min.css",
+                    "dist/fonts/" : "app/fonts/**",
+                    "dist/img/trello.png": "app/img/trello.png",
+                    "dist/img/trello_small.png": "app/img/trello_small.png",
+                    "dist/img/trello_medium.png": "app/img/trello_medium.png",
+                    "dist/js/app.min.js": "app/js/app.min.js",
+                    "dist/js/bootstrap.min.js": "app/js/bootstrap.min.js"
                 }
             }
         },
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         cssmin: {
             dist: {
                 files: {
-                    'css/style.min.css': ['css/style.css']
+                    'app/css/style.min.css': ['app/css/style.css']
                 }
             }
         },
@@ -69,13 +69,13 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'js/app.min.js': ['js/app.js']
+                    'app/js/app.min.js': ['app/js/app.js']
                 }
             }
         },
 
         watch: {
-            files: ['css/app.css', 'js/app.js'],
+            files: ['app/css/app.css', 'app/js/app.js'],
             tasks: ['concat', 'cssmin', 'uglify']
         }
 

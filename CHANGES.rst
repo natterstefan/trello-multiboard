@@ -5,6 +5,7 @@ Changes for trello-multiboard
 unreleased
 ==========
 
+ - moved every css, js, img, fonts and index file to /app
 
 2016/04/29 0.1.0
 =================
