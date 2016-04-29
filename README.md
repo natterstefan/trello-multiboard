@@ -24,7 +24,7 @@ Start Grunt Watch with
 
 Create new version and update `dist` with
 
-`grunt pub`
+`grunt build`
 
 
 ### CONFIGURATION ###
