@@ -7,6 +7,7 @@ The Trello-Multiboard displays several lists (currently: up to three) from diffe
 * display only one board and one member inside the board
 * display all boards of one member
 
+
 ### INSTALLATION ###
 
 * clone git: `git clone https://github.com/natterstefan/trello-multiboard.git`
@@ -17,9 +18,9 @@ The Trello-Multiboard displays several lists (currently: up to three) from diffe
 * replace `XX` with your Trello-API Key (https://trello.com/app-key) in the `app.json` file
 * setup the config file to load at least one of your boards, so you can test it. See the example below.
 * move `app.json` into `/app`
-* run `grunt build`
-* open `/dist` folder in your browser
-* you should now see your card of the configured board
+* run `grunt run`
+* open `http://127.0.0.1:8282/` in your browser
+* you should now see the cards of the configured board
 
 
 ### DEVELOP ###
@@ -39,6 +40,7 @@ Create new version and update `dist` with
 * `name` and the other properties work with RegEx
 * `membersConfig` is optional and can hide specific boards if a certain user is logged in.
 * `color` and `background_color` are optional
+
 
 ### Example app.json config ###
 
@@ -63,6 +65,7 @@ Create new version and update `dist` with
     }
 }
 ```
+
 
 ### AUTHOR & CONTRIBUTORS ###
 
