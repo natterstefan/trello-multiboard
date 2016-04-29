@@ -9,7 +9,7 @@ require.config({
 
 require(["jquery", "app" ], function($) {
 
-    var version = "0.1.0";
+    var version = "0.1.2";
     var app = "";
     var config = [];
     var urlArray = window.location.pathname.split( '/' );

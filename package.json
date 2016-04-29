@@ -1,6 +1,6 @@
 {
   "name": "Trello-Multiboard",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A Trello-Multiboard for (scrum-)teams with multiple Trello boards.",
   "author": "Stefan Natter <stefan@natter.at>",
   "contributors": [

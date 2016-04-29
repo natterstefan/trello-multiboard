@@ -5,6 +5,10 @@ Changes for Trello-Multiboard
 unreleased
 ==========
 
+
+2016/04/30 0.1.2
+=================
+
 - added 'time-grunt'
 - added 'jit-grunt'
 - added 'grunt-http-server'
@@ -18,7 +22,6 @@ unreleased
  - removed base-url from index.html
  - moved every css, js, img, fonts and index file to /app
  - updated README
-
 
 2016/04/29 0.1.0
 =================

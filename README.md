@@ -1,4 +1,4 @@
-# TRELLO-MULTIBOARD (v0.1.0)#
+# TRELLO-MULTIBOARD (v0.1.2)#
 
 The Trello-Multiboard displays several lists (currently: up to three) from different boards. The current features are:
 
