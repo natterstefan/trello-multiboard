@@ -84,6 +84,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['copy']);
-    grunt.registerTask('pub', ['clean:all', 'concat', 'cssmin', 'uglify', 'copy']);
+    grunt.registerTask('build', ['clean:all', 'concat', 'cssmin', 'uglify', 'copy']);
 
 };

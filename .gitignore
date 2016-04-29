@@ -1,6 +1,9 @@
 #ignore node_modules
 node_modules
 
+/dist/app.json
+app.json
+
 *.iml
 
 ## Directory-based project format:
