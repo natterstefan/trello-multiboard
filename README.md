@@ -8,7 +8,8 @@ Trello-Multiboard App to display several lists (up to three) from different boar
 * clone repo: https://github.com/natterstefan/trello-multiboard.git
 * checkout `develop` or `master` branch
 * run `npm install`
-* replace `XX` with your Trello-API Key (https://trello.com/app-key) in the `app.json` file
+* replace `XX` with your Trello-API Key (https://trello.com/app-key) in the `app.json.sample` file
+* copy `app.json.sample` and name it `app.json`
 * run `grunt pub`
 * (currently, must be fixed in the future) modify the `/dist/index.html` and modify the `href` of the `<base>` tag
 * start local server and open `/dist`folder
