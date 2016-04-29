@@ -1,0 +1,41 @@
+{
+  "name": "Trello-Multiboard",
+  "authors": [
+    "Stefan Natter <stefan@natter.at>"
+  ],
+  "description": "A Trello-Multiboard for (scrum-)teams with multiple Trello boards.",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "trello",
+    "multiboard"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests",
+    "src",
+    "*.txt"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "install": {
+    "path": {
+      "js": "js/",
+      "css": "css/"
+    }
+  }
+}

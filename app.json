@@ -1,0 +1,14 @@
+{
+  "key": "XX",
+  "boards" : {
+    "default": {
+        "name": "ls-",
+        "label_ready": "(R|r)eady",
+        "label_working": "(W|w)orking",
+        "label_done": "(D|d)one",
+        "checklists": "^(ACS|acs|ACs)$",
+        "color": "white",
+        "background_color": "#000"
+    }
+  }
+}

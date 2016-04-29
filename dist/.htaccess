@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^member/(.*)$ ./index.html [QSA]
+</IfModule>

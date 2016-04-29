@@ -1,0 +1,37 @@
+{
+  "name": "Trello-Multiboard",
+  "version": "0.1.0",
+  "description": "A Trello-Multiboard for (scrum-)teams with multiple Trello boards.",
+  "author": "Stefan Natter <stefan@natter.at>",
+  "contributors": [
+    {
+      "name": "Stefan Natter",
+      "email": "stefan@natter.at"
+    },{
+      "name": "Manfred Schwendinger",
+      "email": "schwendinger@lovelysystems.com"
+    }],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "jshint-stylish": "^1.0.2"
+  },
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natterstefan/trello-multiboard.git"
+  },
+  "keywords": [
+    "trello",
+    "multiboard"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/natterstefan/trello-multiboard"
+}
