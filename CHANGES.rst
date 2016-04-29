@@ -5,6 +5,7 @@ Changes for trello-multiboard
 unreleased
 ==========
 
+ - removed unused files
  - fixed grunt watch
  - updated grunt build
  - removed base-url from index.html

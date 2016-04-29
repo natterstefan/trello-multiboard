@@ -29,7 +29,11 @@ module.exports = function(grunt) {
             dist: {
               files: [
                 // makes all src relative to cwd
-                { expand: true, cwd: 'app/', src: ['**'], dest: 'dist/' },
+                {
+                  expand: true,
+                  cwd: 'app/',
+                  src: ['**', '!css/app.css', '!css/normalize.css', '!css/style.css', '!js/app.js', '!js/npm.js'  ],
+                  dest: 'dist/' },
               ]
             }
         },
