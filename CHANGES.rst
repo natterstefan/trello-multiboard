@@ -5,6 +5,9 @@ Changes for Trello-Multiboard
 unreleased
 ==========
 
+- added 'time-grunt'
+- added 'jit-grunt'
+- added 'grunt-http-server'
 
 2016/04/29 0.1.1
 =================
