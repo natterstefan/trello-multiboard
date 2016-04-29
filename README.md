@@ -9,13 +9,14 @@ The Trello-Multiboard displays several lists (currently: up to three) from diffe
 
 ### INSTALLATION ###
 
-* clone git: https://github.com/natterstefan/trello-multiboard.git
-* checkout `develop` or `master` branch
+* clone git: `git clone https://github.com/natterstefan/trello-multiboard.git`
+* checkout `git checkout develop` or `git checkout master` branch
+* pull the latest updates `git pull`
 * run `npm install`
 * duplicate and rename `app.json.sample` to `app.json`
 * replace `XX` with your Trello-API Key (https://trello.com/app-key) in the `app.json` file
 * setup the config file to load at least one of your boards, so you can test it. See the example below.
-* move `app.json` into `/app` 
+* move `app.json` into `/app`
 * run `grunt build`
 * open `/dist` folder in your browser
 * you should now see your card of the configured board
@@ -36,6 +37,7 @@ Create new version and update `dist` with
 
 * you can add as many `boards` as you like. Currently the `name` of the board (in this case `ls_boards`) is not used in the code somewhere else (e.g. filter or something)
 * `name` and the other properties work with RegEx
+* `membersConfig` is optional and can hide specific boards if a certain user is logged in.
 * `color` and `background_color` are optional
 
 ### Example app.json config ###
