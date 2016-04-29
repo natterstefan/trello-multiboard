@@ -1,9 +1,20 @@
 ========================================
-Changes for trello-multiboard
+Changes for Trello-Multiboard
 ========================================
 
 unreleased
 ==========
+
+
+2016/04/29 0.1.1
+=================
+
+ - removed unused files
+ - fixed grunt watch
+ - updated grunt build
+ - removed base-url from index.html
+ - moved every css, js, img, fonts and index file to /app
+ - updated README
 
 
 2016/04/29 0.1.0

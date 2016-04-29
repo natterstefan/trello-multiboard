@@ -264,21 +264,25 @@ var App = function(config){
 
     /* 'config' structure
      * key
-     * projects
-     * name
-     * label_ready, label_working, label_done
-     * checklists
+     * boards
+     *  group_name
+     *    name filter
+     *    label_ready, label_working, label_done filter
+     *    checklists filter
+     *    optional: color and background-color
+     *  membersConfig
+     *    userId: filtered-boards
      */
 
-    this.config = config;
+    this.config = config; // config file
     this.boards = []; // all boards
     this.board = ""; // single board
     this.members = []; // all users
     this.member = ""; // single user
     this.userId = ""; // logged in user
 
-    console.info("Config: ", this.config);
-    console.info("App: ", this);
+    //console.info("Config: ", this.config);
+    //console.info("App: ", this);
 
 };
 
@@ -410,8 +414,9 @@ App.prototype.checkBoard = function(result) {
 App.prototype.checkBoards = function(result) {
 
     var ptr = this;
-    var boolBoard = false;
+    var boolBoard = false; /* false = do not load this board */
 
+    /* if more than one board exists, we check them agains the config */
     for (var i = 0; i < result.length; i++) {
         var board = result[i];
 
@@ -419,23 +424,25 @@ App.prototype.checkBoards = function(result) {
 
             if (ptr.config.boards.hasOwnProperty(property)) {
 
-                /* reset value */
+                /* reset value and check if the board.name matches one of the names in the config */
                 boolBoard = false;
                 if ( board['name'].match(ptr.config.boards[property].name) ) {
 
-                    /* if no member_config present */
+                    /* check if a memberConfig is available in the app.json */
                     if (typeof ptr.config.membersConfig != "undefined") {
 
-                        /* if member_config present; check if current user has a rule */
+                        /* if member_config present; check if current user has a rule.
+                        if yes, we also check if the board was marked as doNotLoad in the
+                        membersConfig */
                         if ( board['name'].match(ptr.config.membersConfig[ptr.userId] ) &&
                             typeof ptr.config.membersConfig[ptr.userId] != "undefined" ) {
                             boolBoard = false;
                         } else {
                             boolBoard = true;
                         }
-
                     } else {
-                            boolBoard = true;
+                      /* if no member_config present */
+                      boolBoard = true;
                     }
 
                     /* add board */

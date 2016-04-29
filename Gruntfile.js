@@ -19,17 +19,21 @@ module.exports = function(grunt) {
 
         concat: {
             dist_css: {
-                src: ['app/css/app.css'],
+                src: ['app/css/normalize.css', 'app/css/app.css'],
                 dest: 'app/css/style.css'
             }
         },
 
+        // TODO: fix too much noise, it copies everything
         copy: {
             dist: {
               files: [
                 // makes all src relative to cwd
-                {expand: true, cwd: 'app/', src: ['**'], dest: 'dist/'},
-
+                {
+                  expand: true,
+                  cwd: 'app/',
+                  src: ['**', '!css/app.css', '!css/normalize.css', '!css/style.css', '!js/app.js', '!js/npm.js'  ],
+                  dest: 'dist/' },
               ]
             }
         },
@@ -40,15 +44,6 @@ module.exports = function(grunt) {
                     'app/css/style.min.css': ['app/css/style.css']
                 }
             }
-        },
-
-        meta: {
-            version: '0.0.2',
-            banner: '/*! PROJECT_NAME - v<%= meta.version %> - ' +
-            '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-            '* http://PROJECT_WEBSITE/\n' +
-            '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-            'YOUR_NAME; Licensed MIT */'
         },
 
         uglify: {
@@ -65,8 +60,8 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['app/css/app.css', 'app/js/app.js'],
-            tasks: ['concat', 'cssmin', 'uglify']
+            files: ['app/index.html', 'app/app.json', 'app/css/app.css', 'app/js/app.js'],
+            tasks: ['uglify', 'concat', 'cssmin', 'copy']
         }
 
 
@@ -74,6 +69,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['copy']);
-    grunt.registerTask('build', ['clean:all', 'concat', 'cssmin', 'uglify', 'copy']);
+    grunt.registerTask('build', ['clean:all', 'uglify', 'concat', 'cssmin', 'copy']);
 
 };
