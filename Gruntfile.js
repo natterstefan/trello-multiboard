@@ -26,21 +26,11 @@ module.exports = function(grunt) {
 
         copy: {
             dist: {
-                files: {
-                    "dist/.htaccess": "app/.htaccess",
-                    "dist/index.html": "app/index.html",
-                    "dist/main.js": "app/main.js",
-                    "dist/app.json": "app.json",
-                    "dist/css/style.min.css": "app/css/style.min.css",
-                    "dist/css/bootstrap.min.css": "app/css/bootstrap.min.css",
-                    "dist/css/bootstrap-theme.min.css": "app/css/bootstrap-theme.min.css",
-                    "dist/fonts/" : "app/fonts/**",
-                    "dist/img/trello.png": "app/img/trello.png",
-                    "dist/img/trello_small.png": "app/img/trello_small.png",
-                    "dist/img/trello_medium.png": "app/img/trello_medium.png",
-                    "dist/js/app.min.js": "app/js/app.min.js",
-                    "dist/js/bootstrap.min.js": "app/js/bootstrap.min.js"
-                }
+              files: [
+                // makes all src relative to cwd
+                {expand: true, cwd: 'app/', src: ['**'], dest: 'dist/'},
+
+              ]
             }
         },
 

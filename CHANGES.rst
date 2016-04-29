@@ -5,6 +5,7 @@ Changes for trello-multiboard
 unreleased
 ==========
 
+ - updated grunt build
  - removed base-url from index.html
  - moved every css, js, img, fonts and index file to /app
  - updated README
