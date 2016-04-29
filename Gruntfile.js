@@ -30,7 +30,7 @@ module.exports = function(grunt) {
                     "dist/.htaccess": "app/.htaccess",
                     "dist/index.html": "app/index.html",
                     "dist/main.js": "app/main.js",
-                    "dist/app.json": "app/app.json",
+                    "dist/app.json": "app.json",
                     "dist/css/style.min.css": "app/css/style.min.css",
                     "dist/css/bootstrap.min.css": "app/css/bootstrap.min.css",
                     "dist/css/bootstrap-theme.min.css": "app/css/bootstrap-theme.min.css",

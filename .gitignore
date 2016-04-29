@@ -5,6 +5,7 @@ node_modules
 /dist
 /dist/*
 app/app.json
+app.json
 
 *.iml
 

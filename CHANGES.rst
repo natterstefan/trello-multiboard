@@ -6,6 +6,7 @@ unreleased
 ==========
 
  - moved every css, js, img, fonts and index file to /app
+ - updated README
 
 2016/04/29 0.1.0
 =================

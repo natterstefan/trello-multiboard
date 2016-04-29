@@ -5,15 +5,16 @@ Trello-Multiboard App to display several lists (up to three) from different boar
 
 ### INSTALLATION ###
 
-* clone repo: https://github.com/natterstefan/trello-multiboard.git
+* clone git: https://github.com/natterstefan/trello-multiboard.git
 * checkout `develop` or `master` branch
 * run `npm install`
-* replace `XX` with your Trello-API Key (https://trello.com/app-key) in the `app.json.sample` file
-* copy `app.json.sample` and name it `app.json`
+* duplicate and rename `app.json.sample` to `app.json`
+* replace `XX` with your Trello-API Key (https://trello.com/app-key) in the `app.json` file
+* setup the config file to load at least one of your boards, so you can test it. See the example below.
 * run `grunt pub`
-* (currently, must be fixed in the future) modify the `/dist/index.html` and modify the `href` of the `<base>` tag
-* start local server and open `/dist`folder
-* start developing
+* open the `/dist/index.html` and modify the `href` of the `<base>` tag (currently a known issue). It should point to the url you are currently testing on (e.g. with XAMPP: http://localhost/trello-multiboard for instance)
+* open `/dist` folder in your browser
+* you should now see your card of the configured board
 
 
 ### DEVELOP ###
