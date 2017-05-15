@@ -5,6 +5,10 @@ Changes for Trello-Multiboard
 unreleased
 ==========
 
+2017/05/15 0.1.3
+=================
+
+- UI-Fix: fixed image when user has no avatar. Display Initials instead
 
 2016/04/30 0.1.2
 =================
