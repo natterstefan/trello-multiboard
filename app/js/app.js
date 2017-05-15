@@ -55,7 +55,7 @@ var Card = function(obj, parent) {
 
     this.view = $("#template-card").clone();
     this.view.attr("id", "card-" + this.card.id);
-    console.log("card", this);
+    //console.log("card", this);
 
     var title = this.card.name.replace('#' + this.card.idShort, '').trim();
     $(".card-title-link", this.view).text(title);
@@ -63,9 +63,30 @@ var Card = function(obj, parent) {
     $('.card-project', this.view).text(this.parent.parent.board.name);
     $('.card-number', this.view).text('#' + this.card.idShort);
 
+    var cardMembersElement = $('.card-members', this.view);
+
     /* add member img to the card */
     for (var member in this.card.members) {
-        $('.card-members', this.view).append('<a href="'+this.card.members[member].url +'" target="_blank"><img src="https://trello-avatars.s3.amazonaws.com/'+ this.card.members[member].avatarHash +'/50.png" alt="'+ this.card.members[member].username +'" /></a>');
+
+        var imageHtml = '<a href="'+this.card.members[member].url +'" target="_blank">';
+
+        if(this.card.members[member].avatarHash) {
+            imageHtml += '<img src="https://trello-avatars.s3.amazonaws.com/'+ this.card.members[member].avatarHash +'/50.png" alt="'+ this.card.members[member].username +'" />';
+        } else {
+            /* if avatarHash is not set, calculate initials of full name */
+            var nameSplit = this.card.members[member].fullName.split(" ");
+            var initials = "";
+
+            for(var namePart in nameSplit) {
+                initials += nameSplit[namePart][0].toUpperCase();
+            }
+
+            imageHtml += '<span>' + initials + '</span>';
+        }
+
+        imageHtml += '</a>';
+
+        cardMembersElement.append(imageHtml);
     }
 
     /* add colors */
@@ -119,7 +140,7 @@ var List = function(obj, parent){
 
 List.prototype.loadCards = function(){
     var ptr = this;
-    Trello.get('/lists/'+this.list.id+'/cards?members=true&member_fields=avatarHash,username,url',
+    Trello.get('/lists/'+this.list.id+'/cards?members=true&member_fields=avatarHash,fullName,username,url',
         function(result){
 
             for (var i=0; i<result.length;i++){
